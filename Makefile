@@ -26,9 +26,6 @@ build-examples: build-simavr
 build-parts: build-examples
 	$(MAKE) -C examples/parts RELEASE=$(RELEASE)
 
-iof:
-	$(MAKE) -C ../mcu-projects/avr
-
 install: install-simavr install-parts
 
 install-simavr:
