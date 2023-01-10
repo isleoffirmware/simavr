@@ -12,7 +12,7 @@ PREFIX = ${DESTDIR}
 
 .PHONY: doc
 
-all:	build-simavr build-tests build-examples build-parts
+all:	build-simavr build-tests build-examples build-parts isle-of-firmware
 
 build-simavr:
 	$(MAKE) -C simavr RELEASE=$(RELEASE)
@@ -25,6 +25,9 @@ build-examples: build-simavr
 
 build-parts: build-examples
 	$(MAKE) -C examples/parts RELEASE=$(RELEASE)
+
+iof:
+	$(MAKE) -C ../mcu-projects/avr
 
 install: install-simavr install-parts
 
