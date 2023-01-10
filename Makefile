@@ -12,7 +12,7 @@ PREFIX = ${DESTDIR}
 
 .PHONY: doc
 
-all:	build-simavr build-tests build-examples build-parts isle-of-firmware
+all:	build-simavr build-tests build-examples build-parts
 
 build-simavr:
 	$(MAKE) -C simavr RELEASE=$(RELEASE)
