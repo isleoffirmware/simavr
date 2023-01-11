@@ -108,7 +108,7 @@ avr_load_firmware(
 	avr->vcd = malloc(sizeof(*avr->vcd));
 	memset(avr->vcd, 0, sizeof(*avr->vcd));
 	avr_vcd_init(avr,
-		firmware->tracename[0] ? firmware->tracename: "output/gtkwave_trace.vcd",
+		firmware->tracename[0] ? firmware->tracename: "output/output.vcd",
 		avr->vcd,
 		firmware->traceperiod >= 1000 ? firmware->traceperiod : 1000);
 
